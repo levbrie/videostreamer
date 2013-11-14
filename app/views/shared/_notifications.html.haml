@@ -1,0 +1,7 @@
+/
+  Adds contents of the special flash variable to site layout for messages
+  that appear and then disappear on subsequent reloads
+- flash.each do |name, msg|
+  %div{:class => "alert alert-#{name == :notice ? "success" : "error"}"}
+    %a.close{"data-dismiss" => "alert"} x
+    = msg

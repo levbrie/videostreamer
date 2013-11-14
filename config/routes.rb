@@ -1,4 +1,9 @@
 Videostreamer::Application.routes.draw do
+  resources :videos
+
+  devise_for :users
+  get "landing/index"
+  root :to => "landing#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -39,7 +44,7 @@ Videostreamer::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
