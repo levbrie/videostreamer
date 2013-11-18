@@ -1,0 +1,33 @@
+#pad-wrapper.object-wrapper
+  .row-fluid.header
+    %h3 Users
+  / Users table
+  .row-fluid.table
+    %table.table.table-hover
+      %thead
+        %tr
+          %th.span4.sortable
+            Name
+          %th.span2.sortable
+            %span.line>
+            Created On
+          %th.span2.sortable
+            %span.line>
+            Role
+          %th.span2.sortable.align-right
+            %span.line>
+            Email
+      %tbody
+        - @users.each.with_index do |user, index|
+          / row
+          <tr #{"class=first" if index == 0}>
+          %td
+            = gravatar_for user.email
+            = link_to "#{user.email}", user, :class => "email"
+          %td
+            = user.created_at.to_date
+          %td.align-right
+            = link_to user.email, user
+          %td
+            = render user
+            = link_to("Delete user", user_path(user), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'btn btn-mini') unless user == current_user

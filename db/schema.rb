@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131114101634) do
+ActiveRecord::Schema.define(version: 20131118105248) do
+
+  create_table "ratings", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "video_id"
+    t.integer  "score",      default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "ratings", ["user_id"], name: "index_ratings_on_user_id"
+  add_index "ratings", ["video_id"], name: "index_ratings_on_video_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,5 +41,16 @@ ActiveRecord::Schema.define(version: 20131114101634) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "videos", force: true do |t|
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "panda_video_id"
+    t.string   "title"
+    t.integer  "user_id"
+  end
+
+  add_index "videos", ["user_id"], name: "index_videos_on_user_id"
 
 end

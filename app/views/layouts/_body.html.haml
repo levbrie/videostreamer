@@ -1,23 +1,8 @@
 / main container
-.container
-  .masthead
-    %h3.text-muted Videostreamer
-    %ul.nav.nav-justified
-      %li
-        = link_to "Home", root_path
-  .jumbotron
-    = render 'shared/notifications'
-    %h1 Marketing
-    %p.lead Some paragraph stuff
-  .row
-    = yield
-    .col-lg-4
-      %h2 heading
-      %p paragraph
-    .col-lg-4
-      %h2 heading
-      %p paragraph
-    .col-lg-4
-      %h2 heading
-      %p paragraph
-  = render 'layouts/footer'
+= render 'layouts/todo'
+/ = link_to "Home", root_path
+/ = render 'shared/notifications'
+/ = yield
+/ = render 'layouts/footer'
+
+

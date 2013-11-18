@@ -9,5 +9,18 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require bootstrap
+ *= require calendar/bootstrap_calendar
+ *= require datepicker/datepicker
+ *= require fuelux/fuelux
+ *= require fullcalendar/fullcalendar
+ *= require grid/gallery
+ *= require markdown/bartik
+ *= require markdown/epic-light
+ *= require markdown/epiceditor
+ *= require nestable/nestable
+ *= require prettyphoto/prettyPhoto
+ *= require select2/select2
+ *= require slider/slider
+ *= require app.less
  */

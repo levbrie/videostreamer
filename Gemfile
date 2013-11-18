@@ -8,9 +8,13 @@ gem 'coffee-rails', '~> 4.0.0' 	# Use CoffeeScript for .js.coffee assets and vie
 gem 'jquery-rails' 							# Use jquery as the JavaScript library
 gem 'turbolinks' 								# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'jbuilder', '~> 1.2' 				# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'less-rails'
+gem 'panda', '~> 1.6.0'         # panda video transcoding service
 
 group :development, :test do
 	gem 'rspec-rails', '~> 2.14.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do

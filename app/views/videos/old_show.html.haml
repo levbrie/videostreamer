@@ -1,0 +1,14 @@
+%p#notice= notice
+
+%h2= @video.title
+%p= h @video.panda_video.inspect
+%p
+  %b Title:
+  = @video.title
+
+= link_to 'Edit', edit_video_path(@video)
+\|
+= link_to 'Back', videos_path
+
+
+

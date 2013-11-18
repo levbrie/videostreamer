@@ -26,3 +26,7 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+Panda
+=====
+
+The Panda video encoder transcodes video before uploading to S3.  For the sample development project we use pandavideocloud (Cloud name), and video-panda as our S3 bucket

@@ -1,0 +1,94 @@
+%section.hbox.stretch
+  / .aside
+  %aside#nav.bg-primary.aside-sm
+    %section.vbox
+      %header.dker.nav-bar.nav-bar-fixed-top
+        %a.btn.btn-link.visible-xs{"data-target" => "#nav", "data-toggle" => "class:nav-off-screen"}
+          %i.icon-reorder
+        %a.nav-brand{"data-toggle" => "fullscreen", href: "#"} VideoStreamer
+        %a.btn.btn-link.visible-xs{"data-target" => ".nav-user", "data-toggle" => "class:show"}
+          %i.icon-comment-alt
+      %section
+        / user
+        .bg-success.nav-user.hidden-xs.pos-rlt
+          .nav-avatar.pos-rlt
+            %a.thumb-sm.avatar.animated.rollIn{"data-toggle" => "dropdown", href: "#"}
+              = gravatar_for current_user.email
+              / %img{alt: "", src: "images/avatar.jpg"}/
+              %span.caret.caret-white
+            %ul.dropdown-menu.m-t-sm.animated.fadeInLeft
+              %span.arrow.top
+              %li
+                %a{href: "#"} Settings
+              %li
+                %a{href: "profile.html"} Profile
+              %li
+                %a{href: "#"}
+                  %span.badge.bg-danger.pull-right 3
+                  Notifications
+              %li.divider
+              %li
+                %a{href: "docs.html"} Help
+              %li
+                %a{href: "signin.html"} Logout
+            .visible-xs.m-t.m-b
+              %a.h3{href: "#"} John.Smith
+              %p
+                %i.icon-map-marker
+                London, UK
+        / / user
+        / nav
+        %nav.nav-primary.hidden-xs
+          %ul.nav
+            %li.active
+              %a{href: "#{videos_path}"}
+                %i.icon-eye-open
+                %span Videos
+            %li
+              %a{href: "#{users_path}"}
+                %i.icon-pencil
+                %span Users
+        / / nav
+        / note
+        .bg-danger.wrapper.hidden-vertical.animated.fadeInUp.text-sm
+          %a.pull-right.m-r-n-sm.m-t-n-sm{"data-dismiss" => "alert", href: "#"}
+            %i.icon-close.icon-remove
+          Hi, welcome to videostreamer, a scalable video cloud built on AWS.
+        / / note
+      %footer.footer.bg-gradient.hidden-xs
+        %a.btn.btn-sm.btn-link.m-r-n-xs.pull-right{"data-toggle" => "ajaxModal", href: "modal.lockme.html"}
+          %i.icon-off
+        %a.btn.btn-sm.btn-link.m-l-n-sm{"data-toggle" => "class:nav-vertical", href: "#nav"}
+          %i.icon-reorder
+  / /.aside
+  / .vbox
+  %section#content
+    %section.vbox
+      %header.header.bg-white.b-b
+        %p Welcome to VideoStreamer
+        .row
+          .col-lg-12
+            %section.panel
+              = link_to "Home", root_path
+              = render 'shared/notifications'
+              = yield
+              = render 'layouts/footer'
+              %form
+                %textarea.form-control.input-lg.no-border{placeholder: "What are you doing...", rows: "2"}
+              %footer.panel-footer.bg-light.lter
+                %button.btn.btn-info.pull-right POST
+                %ul.nav.nav-pills
+                  %li
+                    %a{href: "#"}
+                      %i.icon-location-arrow
+                  %li
+                    %a{href: "#"}
+                      %i.icon-camera
+                  %li
+                    %a{href: "#"}
+                      %i.icon-facetime-video
+                  %li
+                    %a{href: "#"}
+                      %i.icon-microphone
+    %a.hide.nav-off-screen-block{"data-target" => "#nav", "data-toggle" => "class:nav-off-screen", href: "#"}
+  / /.vbox
