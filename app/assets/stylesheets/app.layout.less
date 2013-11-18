@@ -4,10 +4,10 @@
 	html, body{
 		width:100%;
 		height:100%;
-		overflow-x: hidden;
+		overflow-x: visible;
 	}
 
-	.hbox{	
+	.hbox{
 		display: table;
 		table-layout: fixed;
 		border-spacing:0;
@@ -19,7 +19,7 @@
 			height: 100%;
 			padding: 0;
 			float: none;
-			&.show, 
+			&.show,
 			&.hidden-sm	{
 				display: table-cell !important;
 			}
@@ -35,13 +35,13 @@
 		position: relative;
 		height: 100%;
 		width: 100%;
-		> section, 
+		> section,
 		> footer {
 			position: absolute;
 			top: 0;
 			bottom: 0;
-			width: 100%;			
-		}		
+			width: 100%;
+		}
 		> header{
 			~ section {
 				top: 50px;
@@ -86,7 +86,7 @@
 			}
 		}
 	}
-	
+
 	.aside-xs{
 		width: 48px;
 	}
@@ -110,11 +110,11 @@
 		-webkit-overflow-scrolling:touch;
 	}
 }
-.hbox > aside, 
+.hbox > aside,
 .hbox > section{
 	padding: 0 !important;
 }
-.header, 
+.header,
 .footer{
 	min-height: 50px;
 	padding: 0 15px;
@@ -134,7 +134,7 @@
 	.nav-tabs {
 		border: none;
 		margin-left: -15px;
-		margin-right: -15px;	
+		margin-right: -15px;
 		> li {
 			a{
 				border: none !important;
@@ -142,7 +142,7 @@
 				padding-top: 15px;
 				padding-bottom: 15px;
 				line-height: 20px;
-				&:hover, 
+				&:hover,
 				&:focus
 				{
 					background-color: transparent;
@@ -178,7 +178,7 @@
 	overflow-y: auto;
 }
 
-.no-touch {	
+.no-touch {
 	.scrollable.hover {
 		overflow-y: hidden;
 		&:hover
@@ -203,7 +203,7 @@ html.layout-box{
 	background-color: #161719;
 	&,
 	body,
-	.hbox, 
+	.hbox,
 	.vbox{
 		height: auto;
 	}
@@ -220,7 +220,7 @@ html.layout-box{
 	width: 7px;
 	height: 7px;
 }
-::-webkit-scrollbar-thumb {	
+::-webkit-scrollbar-thumb {
 	border-radius: 1em;
 	background-color:rgba(50,50,50,0.3);
 }
