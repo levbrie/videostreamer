@@ -10,6 +10,7 @@ gem 'turbolinks' 								# Turbolinks makes following links in your web applicat
 gem 'jbuilder', '~> 1.2' 				# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'less-rails'
 gem 'panda', '~> 1.6.0'         # panda video transcoding service
+gem 'mysql2'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 2.14.0'
