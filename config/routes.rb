@@ -4,7 +4,14 @@ Videostreamer::Application.routes.draw do
   # resources :users
   devise_for :users
   get "landing/index"
-  root :to => "landing#index"
+
+  root :to => "videos#index"
+
+  # devise_scope :user do
+  #   root :to => 'devise/sessions#new'
+  # end
+
+
   match "/panda/authorize_upload", :to => "panda#authorize_upload", :via => [:get, :post]
   match "/panda/authorize_upload_postprocess", :to => "panda#authorize_upload_postprocess", :via => [:get, :post]
   match "/videos/postprocess", :to => "videos#postprocess", :via => [:get, :post]

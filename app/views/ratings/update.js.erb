@@ -1,10 +1,10 @@
-$('#star').raty({
+$("#star_" + <%= @video.id %>).raty({
   readOnly: true,
   score: <%= @video.average_rating %>,
   path: '/assets'
 });
 
-$('#user_star').raty({
+$("#user_star_" + <%= @video.id %>).raty({
   score: <%= @rating.score %>,
   path: '/assets',
   click: function(score, evt) {

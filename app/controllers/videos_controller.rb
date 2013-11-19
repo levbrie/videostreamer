@@ -45,7 +45,7 @@ class VideosController < ApplicationController
     @video = Video.create!(video_params)
     @video.user_id = current_user.id
     # may be necessary instead of below: redirect_to :action => :show, :id => @video.id
-    redirect_to :action => :show, :id => @video.id
+    redirect_to :action => :index
 #    respond_to do |format|
 #      if @video.save
 #        format.html { redirect_to @video, notice: 'Video was successfully created.' }

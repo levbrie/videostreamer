@@ -3,6 +3,7 @@
 <div class="col-lg-6">
   <div class="col-lg-12">
     <h3>Title: <%= video.title %></h3>
+    <p>Upload Timestamp: <%= video.created_at %></p>
     <%= link_to "S3 Url: #{encoding.url}", encoding.url %>
 <!--       <p>Here's the raw video information</p> -->
     <section>
@@ -22,10 +23,8 @@
       poster="<%= encoding.screenshots.first %>" controls>
       <source src="<%= encoding.url %>" type="video/mp4">
     </video>
-    <p>Average Rating: <%= video.average_rating %></p>
-    <div id="star_<%= video.id %>"></div>
-    <p>Your Rating: <%= Rating.where(video_id: video.id, user_id: current_user.id).first.score unless Rating.where(video_id: video.id, user_id: current_user.id).first.nil? %></p>
-    <div id="user_star_<%= video.id %>"></div>
+    Average Rating: <div id="star_<%= video.id %>"></div>
+    User Rating: <div id="user_star_<%= video.id %>"></div>
     <%= link_to 'Delete', video_path(video.id), method: :delete, data: {confirm: "Are you sure?"}, class: "italic" %>
     <!-- <h3>Thumbnails</h3> -->
     <!-- <ul class="thumbnails"> -->
@@ -50,12 +49,12 @@
   $("#star_" + <%= video.id %>).raty({
     readOnly: true,
     score: <%= video.average_rating %>,
-    path: '/assets'
+    path: ''
   });
 
   $('#user_star_' + <%= video.id %>).raty({
     score: <%= video.user_rating(current_user).score %>,
-    path: '/assets',
+    path: '',
     click: function(score, evt) {
       $.ajax({
         url: '/ratings/' + <%= video.user_rating(current_user).id %>,
