@@ -18,4 +18,12 @@ class Video < ActiveRecord::Base
   		return ratings.sum(:score) / ratings.size
   	end
   end
+
+  def user_rating(user)
+    rating = Rating.where(video_id: self.id, user_id: user.id).first
+    unless rating
+      rating = Rating.create(video_id: self.id, user_id: user.id, score: 0)
+    end
+    rating
+  end
 end

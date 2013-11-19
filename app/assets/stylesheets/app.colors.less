@@ -44,7 +44,13 @@
 	.color-variant(@brand-danger, 3.5%, 7.5%, 3.5%, 7%);
 	.font-variant(@brand-danger, #fff, 35%, -20%, 45%, 40%);
 }
-
+.col-lg-6 {
+	section {
+		pre {
+			font-size: 9px;
+		}
+	}
+}
 .bg-white {
 	background-color: #fff;
 	color: @text-color;
@@ -52,6 +58,9 @@
 		color: @link-color;
 		&:hover{
 			color: darken(@link-color, 10%);
+		}
+		&.italic { color: #ff0000; font-style: italic;
+
 		}
 	}
 	.text-muted{color: @text-muted}

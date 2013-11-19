@@ -81,6 +81,7 @@ class VideosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to videos_url }
       format.json { head :no_content }
+      format.js
     end
   end
 

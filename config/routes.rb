@@ -1,13 +1,15 @@
 Videostreamer::Application.routes.draw do
   resources :videos
   resources :ratings, only: :update
-  resources :users
+  # resources :users
   devise_for :users
   get "landing/index"
   root :to => "landing#index"
   match "/panda/authorize_upload", :to => "panda#authorize_upload", :via => [:get, :post]
   match "/panda/authorize_upload_postprocess", :to => "panda#authorize_upload_postprocess", :via => [:get, :post]
   match "/videos/postprocess", :to => "videos#postprocess", :via => [:get, :post]
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

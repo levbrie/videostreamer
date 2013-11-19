@@ -13,7 +13,7 @@
         .bg-success.nav-user.hidden-xs.pos-rlt
           .nav-avatar.pos-rlt
             %a.thumb-sm.avatar.animated.rollIn{"data-toggle" => "dropdown", href: "#"}
-              = gravatar_for current_user.email
+              = gravatar_for current_user.email if current_user
               / %img{alt: "", src: "images/avatar.jpg"}/
               %span.caret.caret-white
             %ul.dropdown-menu.m-t-sm.animated.fadeInLeft
@@ -30,7 +30,7 @@
               %li
                 %a{href: "docs.html"} Help
               %li
-                %a{href: "signin.html"} Logout
+                = link_to "Sign out", destroy_user_session_path, :method => :delete
             .visible-xs.m-t.m-b
               %a.h3{href: "#"} John.Smith
               %p
@@ -45,7 +45,7 @@
                 %i.icon-eye-open
                 %span Videos
             %li
-              %a{href: "#{users_path}"}
+              %a{href: "#"}
                 %i.icon-pencil
                 %span Users
         / / nav
