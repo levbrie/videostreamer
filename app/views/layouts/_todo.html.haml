@@ -65,11 +65,10 @@
   %section#content
     %section.vbox
       %header.header.bg-white.b-b
-        %p Welcome to VideoStreamer
+        = link_to "Welcome to Video Streamer!", videos_path
         .row
           .col-lg-12
             %section.panel
-              = link_to "Home", root_path
               = render 'shared/notifications'
               = yield
               = render 'layouts/footer'
