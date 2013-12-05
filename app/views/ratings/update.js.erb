@@ -1,12 +1,12 @@
 $("#star_" + <%= @video.id %>).raty({
   readOnly: true,
   score: <%= @video.average_rating %>,
-  path: '/assets'
+  path: '/'
 });
 
 $("#user_star_" + <%= @video.id %>).raty({
   score: <%= @rating.score %>,
-  path: '/assets',
+  path: '/',
   click: function(score, evt) {
     $.ajax({
       url: '/ratings/' + <%= @rating.id %>,

@@ -1,0 +1,361 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265
+{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red180\green36\blue25;\red47\green180\blue29;\red46\green174\blue187;
+\red64\green11\blue217;\red200\green20\blue201;\red159\green160\blue28;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural
+
+\f0\b\fs22 \cf2 \CocoaLigature0 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 git aws.push\
+Counting objects: 36, done.\
+Delta compression using up to 8 threads.\
+Compressing objects: 100% (19/19), done.\
+Writing objects: 100% (20/20), 3.64 KiB | 0 bytes/s, done.\
+Total 20 (delta 14), reused 0 (delta 0)\
+remote: \
+To https://AKIAJNWFAU2TL4BJGDFA:20131119T003918Z6b31678be46861f51ec5706b288cd21810d828d9c847544e97a92accb43a2800@git.elasticbeanstalk.us-east-1.amazonaws.com/v1/repos/766964656f73747265616d6572/commitid/30646533393638303161666666323835386431303736343633656166343133613966343066666234/environment/70726f64756374696f6e\
+   48d0392..0de3968  HEAD -> master\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 git status --verbose\
+# On branch master\
+nothing to commit, working directory clean\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 eb status --verbose\
+Retrieving status of environment "production".\
+URL	: production-ezum4vv3kz.elasticbeanstalk.com\
+Status	: Updating\
+Health	: Grey\
+Environment Name:	production\
+Environment ID:		e-ihhcgqpm5x\
+Solution Stack:		64bit Amazon Linux 2013.09 running Ruby 1.9.3\
+Version Label:		git-0de396801afff2858d1076463eaf413a9f40ffb4-1384821559005\
+Date Created:		2013-11-18 16:51:52\
+Date Updated:		2013-11-18 19:39:21\
+Description:		\
+\
+RDS Database: AWSEBRDSDatabase | aaho5r91sg9epl.cvhjsyfmcp0t.us-east-1.rds.amazonaws.com:3306\
+Database Engine:	mysql 5.5.33\
+Allocated Storage:	5\
+Instance Class:		db.t1.micro\
+Multi AZ:		False\
+Master Username:	ebroot\
+Creation Time:		2013-11-18 16:57:29\
+DB Instance Status:	available\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 eb status --verbose\
+Retrieving status of environment "production".\
+URL	: production-ezum4vv3kz.elasticbeanstalk.com\
+Status	: Ready\
+Health	: Green\
+Environment Name:	production\
+Environment ID:		e-ihhcgqpm5x\
+Solution Stack:		64bit Amazon Linux 2013.09 running Ruby 1.9.3\
+Version Label:		git-0de396801afff2858d1076463eaf413a9f40ffb4-1384821559005\
+Date Created:		2013-11-18 16:51:52\
+Date Updated:		2013-11-18 19:42:07\
+Description:		\
+\
+RDS Database: AWSEBRDSDatabase | aaho5r91sg9epl.cvhjsyfmcp0t.us-east-1.rds.amazonaws.com:3306\
+Database Engine:	mysql 5.5.33\
+Allocated Storage:	5\
+Instance Class:		db.t1.micro\
+Multi AZ:		False\
+Master Username:	ebroot\
+Creation Time:		2013-11-18 16:57:29\
+DB Instance Status:	available\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 rake routes\
+                            Prefix Verb     URI Pattern                                   Controller#Action\
+                            videos GET      /videos(.:format)                             videos#index\
+                                   POST     /videos(.:format)                             videos#create\
+                         new_video GET      /videos/new(.:format)                         videos#new\
+                        edit_video GET      /videos/:id/edit(.:format)                    videos#edit\
+                             video GET      /videos/:id(.:format)                         videos#show\
+                                   PATCH    /videos/:id(.:format)                         videos#update\
+                                   PUT      /videos/:id(.:format)                         videos#update\
+                                   DELETE   /videos/:id(.:format)                         videos#destroy\
+                            rating PATCH    /ratings/:id(.:format)                        ratings#update\
+                                   PUT      /ratings/:id(.:format)                        ratings#update\
+                  new_user_session GET      /users/sign_in(.:format)                      devise/sessions#new\
+                      user_session POST     /users/sign_in(.:format)                      devise/sessions#create\
+              destroy_user_session DELETE   /users/sign_out(.:format)                     devise/sessions#destroy\
+                     user_password POST     /users/password(.:format)                     devise/passwords#create\
+                 new_user_password GET      /users/password/new(.:format)                 devise/passwords#new\
+                edit_user_password GET      /users/password/edit(.:format)                devise/passwords#edit\
+                                   PATCH    /users/password(.:format)                     devise/passwords#update\
+                                   PUT      /users/password(.:format)                     devise/passwords#update\
+          cancel_user_registration GET      /users/cancel(.:format)                       devise/registrations#cancel\
+                 user_registration POST     /users(.:format)                              devise/registrations#create\
+             new_user_registration GET      /users/sign_up(.:format)                      devise/registrations#new\
+            edit_user_registration GET      /users/edit(.:format)                         devise/registrations#edit\
+                                   PATCH    /users(.:format)                              devise/registrations#update\
+                                   PUT      /users(.:format)                              devise/registrations#update\
+                                   DELETE   /users(.:format)                              devise/registrations#destroy\
+                     landing_index GET      /landing/index(.:format)                      landing#index\
+                              root GET      /                                             landing#index\
+            panda_authorize_upload GET|POST /panda/authorize_upload(.:format)             panda#authorize_upload\
+panda_authorize_upload_postprocess GET|POST /panda/authorize_upload_postprocess(.:format) panda#authorize_upload_postprocess\
+                videos_postprocess GET|POST /videos/postprocess(.:format)                 videos#postprocess\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 rails c\
+Loading development environment (Rails 4.0.0)\
+2.0.0-p247 :001 > Video.find(6).destroy!\
+  
+\f0\b \cf4 Video Load (2.0ms)
+\f1\b0 \cf0   
+\f0\b SELECT "videos".* FROM "videos" WHERE "videos"."id" = ? LIMIT 1
+\f1\b0   [["id", 6]]\
+  
+\f0\b \cf6  (0.1ms)
+\f1\b0 \cf0   begin transaction\
+  
+\f0\b \cf4 SQL (0.5ms)
+\f1\b0 \cf0   
+\f0\b DELETE FROM "videos" WHERE "videos"."id" = ?
+\f1\b0   [["id", 6]]\
+  
+\f0\b \cf6  (0.6ms)
+\f1\b0 \cf0   commit transaction\
+ => #<Video id: 6, url: nil, created_at: "2013-11-19 02:02:36", updated_at: "2013-11-19 02:02:36", panda_video_id: "7ff88224ccc5e434ed49c776b47d7078", title: "bad format", user_id: nil> \
+2.0.0-p247 :002 > ^C\
+2.0.0-p247 :002 > exit\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) \cf7 \uc0\u10007 \cf5  
+\f1\b0 \cf0 git add --all\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) \cf7 \uc0\u10007 \cf5  
+\f1\b0 \cf0 git commit -m "fix for star ratings on videos index page and upgarde of user profile and routes"\
+[master 9ef608a] fix for star ratings on videos index page and upgarde of user profile and routes\
+ 8 files changed, 26 insertions(+), 12 deletions(-)\
+ create mode 100755 public/star-off.png\
+ create mode 100755 public/star-on.png\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 git push\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+Counting objects: 31, done.\
+Delta compression using up to 8 threads.\
+Compressing objects: 100% (15/15), done.\
+Writing objects: 100% (16/16), 1.70 KiB | 0 bytes/s, done.\
+Total 16 (delta 14), reused 0 (delta 0)\
+To https://github.com/levbrie/videostreamer.git\
+   0de3968..9ef608a  master -> master\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 git aws.push\
+Counting objects: 31, done.\
+Delta compression using up to 8 threads.\
+Compressing objects: 100% (15/15), done.\
+Writing objects: 100% (16/16), 1.70 KiB | 0 bytes/s, done.\
+Total 16 (delta 14), reused 0 (delta 0)\
+remote: \
+To https://AKIAJNWFAU2TL4BJGDFA:20131119T030756Ze0ed4deb6acad8a92c1b32dc2aea506e4db03161d21751d693a194783cea77cb@git.elasticbeanstalk.us-east-1.amazonaws.com/v1/repos/766964656f73747265616d6572/commitid/39656636303861663538326331313764663634346363303535373862636537663637393966643636/environment/70726f64756374696f6e\
+   0de3968..9ef608a  HEAD -> master\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 eb status --verbose\
+Retrieving status of environment "production".\
+URL	: production-ezum4vv3kz.elasticbeanstalk.com\
+Status	: Ready\
+Health	: Green\
+Environment Name:	production\
+Environment ID:		e-ihhcgqpm5x\
+Solution Stack:		64bit Amazon Linux 2013.09 running Ruby 1.9.3\
+Version Label:		git-9ef608af582c117df644cc05578bce7f6799fd66-1384830476711\
+Date Created:		2013-11-18 16:51:52\
+Date Updated:		2013-11-18 22:14:48\
+Description:		\
+\
+RDS Database: AWSEBRDSDatabase | aaho5r91sg9epl.cvhjsyfmcp0t.us-east-1.rds.amazonaws.com:3306\
+Database Engine:	mysql 5.5.33\
+Allocated Storage:	5\
+Instance Class:		db.t1.micro\
+Multi AZ:		False\
+Master Username:	ebroot\
+Creation Time:		2013-11-18 16:57:29\
+DB Instance Status:	available\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 git add --all \
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) \cf7 \uc0\u10007 \cf5  
+\f1\b0 \cf0 git commit -m "add live stream"\
+[master 7c59912] add live stream\
+ 2 files changed, 58 insertions(+), 4 deletions(-)\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 git push\
+warning: push.default is unset; its implicit value is changing in\
+Git 2.0 from 'matching' to 'simple'. To squelch this message\
+and maintain the current behavior after the default changes, use:\
+\
+  git config --global push.default matching\
+\
+To squelch this message and adopt the new behavior now, use:\
+\
+  git config --global push.default simple\
+\
+See 'git help config' and search for 'push.default' for further information.\
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode\
+'current' instead of 'simple' if you sometimes use older versions of Git)\
+\
+Counting objects: 15, done.\
+Delta compression using up to 8 threads.\
+Compressing objects: 100% (8/8), done.\
+Writing objects: 100% (8/8), 1.53 KiB | 0 bytes/s, done.\
+Total 8 (delta 6), reused 0 (delta 0)\
+To https://github.com/levbrie/videostreamer.git\
+   9ef608a..7c59912  master -> master\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 git aws.push\
+Counting objects: 15, done.\
+Delta compression using up to 8 threads.\
+Compressing objects: 100% (8/8), done.\
+Writing objects: 100% (8/8), 1.53 KiB | 0 bytes/s, done.\
+Total 8 (delta 6), reused 0 (delta 0)\
+remote: \
+To https://AKIAJNWFAU2TL4BJGDFA:20131119T040818Z5860beb448fa988fc285f29868f6e753438472f41c7c2bbb2c76cc860806f047@git.elasticbeanstalk.us-east-1.amazonaws.com/v1/repos/766964656f73747265616d6572/commitid/37633539393132323634623030303130383438326131633438623031663265653564366539363334/environment/70726f64756374696f6e\
+   9ef608a..7c59912  HEAD -> master\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 eb status -verbose\
+Error: unrecognized arguments: -verbose\
+usage: eb \{COMMAND\} [options]\
+Try eb --help for more information.\
+\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 eb status --verbose\
+Retrieving status of environment "production".\
+URL	: production-ezum4vv3kz.elasticbeanstalk.com\
+Status	: Updating\
+Health	: Grey\
+Environment Name:	production\
+Environment ID:		e-ihhcgqpm5x\
+Solution Stack:		64bit Amazon Linux 2013.09 running Ruby 1.9.3\
+Version Label:		git-9ef608af582c117df644cc05578bce7f6799fd66-1384830476711\
+Date Created:		2013-11-18 16:51:52\
+Date Updated:		2013-11-18 23:08:21\
+Description:		\
+\
+RDS Database: AWSEBRDSDatabase | aaho5r91sg9epl.cvhjsyfmcp0t.us-east-1.rds.amazonaws.com:3306\
+Database Engine:	mysql 5.5.33\
+Allocated Storage:	5\
+Instance Class:		db.t1.micro\
+Multi AZ:		False\
+Master Username:	ebroot\
+Creation Time:		2013-11-18 16:57:29\
+DB Instance Status:	available\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 eb status --verbose\
+Retrieving status of environment "production".\
+URL	: production-ezum4vv3kz.elasticbeanstalk.com\
+Status	: Updating\
+Health	: Grey\
+Environment Name:	production\
+Environment ID:		e-ihhcgqpm5x\
+Solution Stack:		64bit Amazon Linux 2013.09 running Ruby 1.9.3\
+Version Label:		git-7c59912264b000108482a1c48b01f2ee5d6e9634-1384834099069\
+Date Created:		2013-11-18 16:51:52\
+Date Updated:		2013-11-18 23:08:21\
+Description:		\
+\
+RDS Database: AWSEBRDSDatabase | aaho5r91sg9epl.cvhjsyfmcp0t.us-east-1.rds.amazonaws.com:3306\
+Database Engine:	mysql 5.5.33\
+Allocated Storage:	5\
+Instance Class:		db.t1.micro\
+Multi AZ:		False\
+Master Username:	ebroot\
+Creation Time:		2013-11-18 16:57:29\
+DB Instance Status:	available\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 eb status --verbose\
+Retrieving status of environment "production".\
+URL	: production-ezum4vv3kz.elasticbeanstalk.com\
+Status	: Updating\
+Health	: Grey\
+Environment Name:	production\
+Environment ID:		e-ihhcgqpm5x\
+Solution Stack:		64bit Amazon Linux 2013.09 running Ruby 1.9.3\
+Version Label:		git-7c59912264b000108482a1c48b01f2ee5d6e9634-1384834099069\
+Date Created:		2013-11-18 16:51:52\
+Date Updated:		2013-11-18 23:08:21\
+Description:		\
+\
+RDS Database: AWSEBRDSDatabase | aaho5r91sg9epl.cvhjsyfmcp0t.us-east-1.rds.amazonaws.com:3306\
+Database Engine:	mysql 5.5.33\
+Allocated Storage:	5\
+Instance Class:		db.t1.micro\
+Multi AZ:		False\
+Master Username:	ebroot\
+Creation Time:		2013-11-18 16:57:29\
+DB Instance Status:	available\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 eb status --verbose\
+Retrieving status of environment "production".\
+URL	: production-ezum4vv3kz.elasticbeanstalk.com\
+Status	: Updating\
+Health	: Grey\
+Environment Name:	production\
+Environment ID:		e-ihhcgqpm5x\
+Solution Stack:		64bit Amazon Linux 2013.09 running Ruby 1.9.3\
+Version Label:		git-7c59912264b000108482a1c48b01f2ee5d6e9634-1384834099069\
+Date Created:		2013-11-18 16:51:52\
+Date Updated:		2013-11-18 23:08:21\
+Description:		\
+\
+RDS Database: AWSEBRDSDatabase | aaho5r91sg9epl.cvhjsyfmcp0t.us-east-1.rds.amazonaws.com:3306\
+Database Engine:	mysql 5.5.33\
+Allocated Storage:	5\
+Instance Class:		db.t1.micro\
+Multi AZ:		False\
+Master Username:	ebroot\
+Creation Time:		2013-11-18 16:57:29\
+DB Instance Status:	available\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) 
+\f1\b0 \cf0 eb status --verbose\
+Retrieving status of environment "production".\
+URL	: production-ezum4vv3kz.elasticbeanstalk.com\
+Status	: Ready\
+Health	: Green\
+Environment Name:	production\
+Environment ID:		e-ihhcgqpm5x\
+Solution Stack:		64bit Amazon Linux 2013.09 running Ruby 1.9.3\
+Version Label:		git-7c59912264b000108482a1c48b01f2ee5d6e9634-1384834099069\
+Date Created:		2013-11-18 16:51:52\
+Date Updated:		2013-11-18 23:15:44\
+Description:		\
+\
+RDS Database: AWSEBRDSDatabase | aaho5r91sg9epl.cvhjsyfmcp0t.us-east-1.rds.amazonaws.com:3306\
+Database Engine:	mysql 5.5.33\
+Allocated Storage:	5\
+Instance Class:		db.t1.micro\
+Multi AZ:		False\
+Master Username:	ebroot\
+Creation Time:		2013-11-18 16:57:29\
+DB Instance Status:	available\
+
+\f0\b \cf2 \uc0\u10140  \cf3  \cf4 videostreamer \cf5 git:(\cf2 master\cf5 ) }

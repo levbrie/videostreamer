@@ -21,7 +21,7 @@
               %li
                 %a{href: "#"} Settings
               %li
-                %a{href: "#"} Profile
+                %a{href: "#{edit_user_password_path}"} Profile
               %li
                 %a{href: "#"}
                   %span.badge.bg-danger.pull-right 3
@@ -32,7 +32,7 @@
               %li
                 = link_to "Sign out", destroy_user_session_path, :method => :delete
             .visible-xs.m-t.m-b
-              %a.h3{href: "#"} John.Smith
+              %a.h3{href: "#"} "#{current_user.email}"
               %p
                 %i.icon-map-marker
                 London, UK
@@ -45,9 +45,9 @@
                 %i.icon-eye-open
                 %span Videos
             %li
-              %a{href: "#"}
+              %a{href: "#{new_user_session_path}"}
                 %i.icon-pencil
-                %span Users
+                %span Log In
         / / nav
         / note
         .bg-danger.wrapper.hidden-vertical.animated.fadeInUp.text-sm
